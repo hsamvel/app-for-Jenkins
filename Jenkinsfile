@@ -8,7 +8,7 @@ pipeline {
       steps {
         sh '''echo "This is build stage"
 echo "Start building...... "'''
-        sh 'echo ${CURRENT_DIR}'
+        sh 'echo ${CURENT_DIR}'
         sh 'ip addr'
       }
     }
