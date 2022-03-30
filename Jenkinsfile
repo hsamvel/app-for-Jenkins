@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  environment{
+  environment {
   CURENT_DIR = pwd
   }
   stages {
