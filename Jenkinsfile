@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-  CURENT_DIR = sh 'pwd'
+  CURENT_DIR = 'Hello world!'
   }
   stages {
     stage('Build') {
