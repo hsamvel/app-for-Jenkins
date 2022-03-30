@@ -1,21 +1,23 @@
 pipeline {
   agent {
-    node{
-    label 'Linux_Slave_1'
+    node {
+      label 'Linux_Slave_1'
     }
-  }
-  environment {
-  CURENT_DIR = 'Hello world!'
+
   }
   stages {
     stage('Build') {
       steps {
         sh '''echo "This is build stage"
 echo "Start building...... "'''
-        sh 'echo ${CURENT_DIR}'
+        sh 'echo hello ${CURRENT_USER}'
         sh 'pwd'
       }
     }
 
+  }
+  environment {
+    CURENT_DIR = 'Hello world!'
+    CURRENT_USER = 'Sam'
   }
 }
