@@ -13,7 +13,7 @@ pipeline {
         sh '''echo "This is build stage"
 echo "Start building...... "'''
         sh 'echo ${CURENT_DIR}'
-        sh 'ifconfig eth0'
+        sh 'ifconfig'
       }
     }
 
