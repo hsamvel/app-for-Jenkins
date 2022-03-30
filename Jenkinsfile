@@ -19,7 +19,7 @@ echo "Start building...... "'''
 
   }
   environment {
-    CURENT_DIR = 'Hello world!'
+    MESSAGE = 'Hello world!'
     CURRENT_USER = 'Sam'
   }
 }
