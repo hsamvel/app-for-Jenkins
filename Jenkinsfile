@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment{
+  CURENT_DIR = pwd
+  }
   stages {
     stage('Build') {
       steps {
