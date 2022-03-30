@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'Linux_Slave_1'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
