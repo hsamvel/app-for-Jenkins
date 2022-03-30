@@ -6,6 +6,7 @@ pipeline {
         sh '''echo "This is build stage"
 echo "Start building...... "'''
         sh 'pwd'
+        sh 'ip addr'
       }
     }
 
