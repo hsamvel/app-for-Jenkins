@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    node{
+    label 'Linux_Slave_1'
+    }
+  }
   environment {
   CURENT_DIR = 'Hello world!'
   }
