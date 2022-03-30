@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh '''echo "This is build stage"
 echo "Start building...... "'''
+        sh 'pwd'
       }
     }
 
