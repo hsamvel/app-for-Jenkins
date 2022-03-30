@@ -8,7 +8,8 @@ echo "Start building...... "'''
         sh 'echo hello ${CURRENT_USER}'
         sh 'pwd'
         writeFile(file: 'from_build', text: 'Existence of this file speaks about succesfull build', encoding: 'utf-8')
-        sh 'cat from_build'
+        sh '''echo ${MESSAGE} > from_build
+ '''
       }
     }
 
