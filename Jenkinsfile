@@ -3,12 +3,7 @@ pipeline {
   stages {
     stage('Error Handling') {
       steps {
-        try {
-          sh '''python.exe'''
-        } catch (Exception err){
-          sh "error found"
-        }
-
+        echo ${MESSAGE}
       }
     }
 
