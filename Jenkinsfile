@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('Error Handling') {
       steps {
-        warnError(message: 'Error occured') {
-          sh '''python.exe
-
-'''
+        try {
+          sh '''python.exe'''
+        } catch (Exception e){
+          sh "error found"
         }
 
       }
