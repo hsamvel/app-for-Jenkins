@@ -16,4 +16,3 @@ pipeline {
     MESSAGE = 'Hello world!'
     CURRENT_USER = 'Sam'
   }
-}
