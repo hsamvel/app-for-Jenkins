@@ -1,15 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Error Handling') {
       steps {
-        sh '''echo "This is build stage"
-echo "Start building...... "'''
-        sh 'echo hello ${CURRENT_USER}'
-        sh 'pwd'
-        writeFile(file: 'from_build', text: 'Existence of this file speaks about succesfull build', encoding: 'utf-8')
-        sh '''echo ${MESSAGE} > from_build
- '''
+        warnError(message: 'Error occured') {
+          sh '''sleep 10
+'''
+        }
+
       }
     }
 
