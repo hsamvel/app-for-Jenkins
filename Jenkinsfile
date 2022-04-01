@@ -1,14 +1,18 @@
 pipeline {
-  agent any
-  stages {
-    stage('Error Handling'){
-      step("Printing message"){
-        echo "Hello"
-      }
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                script{
+                try {
+                sh "python -version"
+                }   catch (error){
+                        echo 'error'
+                 
+                 }
+                }
+            }
+        }
     }
-  }
-  environment {
-    MESSAGE = 'Hello world!'
-    CURRENT_USER = 'Sam'
-  }
-  }
+}
