@@ -5,7 +5,7 @@ pipeline {
       steps {
         try {
           sh '''python.exe'''
-        } catch (Exception e){
+        } catch (Exception err){
           sh "error found"
         }
 
