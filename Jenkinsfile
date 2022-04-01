@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Error Handling') {
       steps {
-        echo ${MESSAGE}
+        echo '${MESSAGE}'
       }
     }
 
