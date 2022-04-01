@@ -4,7 +4,8 @@ pipeline {
     stage('Error Handling') {
       steps {
         warnError(message: 'Error occured') {
-          sh '''sleep 10
+          sh '''python.exe
+
 '''
         }
 
