@@ -3,8 +3,9 @@ pipeline {
   stages {
     stage('Error Handling'){
       step("Printing message"){
-        echo "Hello"}
-
+        echo "Hello"
+      }
+    }
   }
   environment {
     MESSAGE = 'Hello world!'
