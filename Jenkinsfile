@@ -3,9 +3,14 @@ pipeline {
   stages {
     stage('Error Handling') {
       steps {
-        echo '${MESSAGE}'
-        error 'Error occures'
-      }
+        try {
+          echo '${MESSAGE}'
+          python.exe }
+        catch (Exception err) {
+          echo "there is an error"
+        }
+          
+        }
     }
 
   }
