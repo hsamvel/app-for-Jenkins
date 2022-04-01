@@ -4,6 +4,11 @@ pipeline {
     stage('Error Handling') {
       steps {
         echo '${MESSAGE}'
+        warnError(message: 'Error occures', catchInterruptions: true) {
+          sh '''python.exe
+'''
+        }
+
       }
     }
 
