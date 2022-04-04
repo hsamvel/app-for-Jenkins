@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Hello') {
+    stage('CatchingError') {
       steps {
-        catchError(buildResult: 'Failure', message: 'Error occured')
+        sh '''python
+'''
+        catchError(buildResult: 'Failure', message: 'Something went wrong')
       }
     }
 
