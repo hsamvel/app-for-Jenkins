@@ -3,9 +3,13 @@ pipeline {
   stages {
     stage('CatchingError') {
       steps {
-        sh '''python
-'''
-        warnError(message: 'Something went wrong', catchInterruptions: true)
+        script{
+          try {sh "python -version"
+          }   catch (error){
+            echo 'error'
+
+          }
+        }
       }
     }
 
