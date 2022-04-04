@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('') {
       steps {
-        catchError(buildResult: 'Failure', message: 'Something', stageResult: 'Failure', catchInterruptions: true) {
+        catchError(buildResult: 'Failure', message: 'Something', stageResult: 'Failure', catchInterruptions: false) {
           sh '''sleep 20
 '''
         }
