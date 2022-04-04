@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''python
 '''
-        catchError(buildResult: 'Failure', message: 'Something went wrong')
+        warnError(message: 'Something went wrong', catchInterruptions: true)
       }
     }
 
