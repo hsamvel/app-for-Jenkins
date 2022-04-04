@@ -12,6 +12,7 @@ pipeline {
           }
         }
 
+        catchError(buildResult: 'Failure', message: 'Error occured')
       }
     }
 
