@@ -1,15 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('CatchingError') {
+    stage('') {
       steps {
-        script{
-          try {sh "python -version"
-          }   catch (error){
-            echo 'error'
-
-          }
-        }
+        catchError(catchInterruptions: true, buildResult: 'Failure', message: 'Something')
       }
     }
 
